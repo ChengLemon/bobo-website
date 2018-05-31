@@ -1,0 +1,109 @@
+/**
+ * 自定义
+ */
+body {
+	color: #767676;
+	font-size: 14px;
+}
+.nomargin-bottom {
+	margin-bottom: 0;
+}
+.nav-custom {
+	/*背景透明*/
+	background-color: transparent;   
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 99999;
+	width: 100%;
+	border: none;
+}
+.nav-custom a {
+	color: #fff !important;
+}
+.float-header {
+	background-color: rgba(0,0,0,0.9);
+}
+.bobo-title {
+	color: #443F3F;
+	text-align: center;
+	margin-bottom: 50px;
+	position: relative;
+	font-weight: 600;
+	line-height: normal;
+	text-transform: uppercase;
+	padding-bottom: 10px;
+}
+h3 {
+	font-size: 32px;
+}
+.icon { 
+	width: 70px;
+	height: 70px;
+	margin: 0 auto;
+	border: 1px solid #F14F4F;
+	line-height: 75px;
+	border-radius: 50%;
+	margin-bottom: 20px;
+}
+.icon .iconfont {
+	font-size: 26px;
+	color: #F14F4F;
+}
+.bobo-whitebg {
+	background-color: #fff;
+}
+.content-box {
+	text-align: center;
+}
+.content-box .content {
+	overflow: hidden;
+}
+.content-box .content h3 { 
+	font-size: 16px;
+	font-weight: 500;
+	line-height: normal;
+	margin: 7px 0 10px;
+	color: #191919;
+}
+.content-box .content p { 
+	font-size: 16px; 
+}
+.bobo-borderbotoom {
+	border-bottom: 1px solid #e0e0e0;
+}
+.foryou .bobo-title {
+	margin-bottom: 10px;
+}
+.bobo-subtitle {
+	text-align: center;
+	color: #443f3f;
+	font-size: 20px;
+	font-weight: 500;
+	margin: 10px 0 25px 0;
+}
+.margin4 {
+	margin-bottom: 30px;
+}
+.numbers {
+	background-color: #08aba6;
+	color: #fff;
+}
+.roll-counter .name-count {
+	font-size: 14px;
+	font-weight: 600;
+	padding: 15px 0;	
+}
+.roll-counter .numb-count {
+	font-size: 44px;
+	padding: 0;
+	font-weight: 600;
+	font-family: "Raleway", sans-serif;
+}
+.whiteico {
+	color: #fff;
+	font-size: 30px !important;
+}
+.contact {
+	background-color: #f6f6f6;
+}
