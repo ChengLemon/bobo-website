@@ -10,6 +10,14 @@
 	<link rel="stylesheet" type="text/css" href="./resource/plugin/superslides0.5/superslides.css">
 	<link rel="stylesheet" type="text/css" href="./resource/iconfont/iconfont.css">
 	<link rel="stylesheet" type="text/css" href="./resource/iconfont/iconfont1.css">
+	<style type="text/css" media="screen"> 
+		.number-main .col-md-4:nth-child(2) .numb-count::after {
+			content:"%";
+		}
+		.number-main .col-md-4:nth-child(3) .numb-count::after {
+			content:" hours";
+		} 
+	</style>
 </head>
 <body class="">
 
@@ -141,46 +149,21 @@
 					</div>
 					<div class="row">
 						<div class="col-xs-12 col-sm-12 col-md-4 margin4 text-center">
-							<img src="./resource/images/for3.jpg" alt="ForYou" style="height: auto;max-width: 100%;" width="576" height="1074">
+							<img src="./resource/images/for3.jpg" alt="ForYou" class="img-responsive center-block" >
 						</div> 
 						<div class="col-xs-12 col-sm-12 col-md-4 margin4 text-center">
-							<img src="./resource/images/for1.jpg" alt="ForYou" style="height: auto;max-width: 100%;" width="576" height="1074"> 
+							<img src="./resource/images/for1.jpg" alt="ForYou" class="img-responsive center-block" > 
 						</div> 
 						<div class="col-xs-12 col-sm-12 col-md-4 margin4 text-center">
-							<img src="./resource/images/for2.jpg" alt="ForYou" style="height: auto;max-width: 100%;" width="576" height="1074">
+							<img src="./resource/images/for2.jpg" alt="ForYou" class="img-responsive center-block" >
 						</div>  
 					</div>
 				</div>
 			</div> 
 			<!-- section2 end -->
 
-			<!-- section2 --> 
-			<div class="jumbotron contact"> 
-				<div class="container">
-					<div class="row">
-						<div class="col-xs-12 col-sm-12 col-md-12">
-							<h3 class="bobo-title">For You</h3>
-							<h5 class="bobo-subtitle">We are so lucky to meet each other. I wish you good luck all the time.</h5>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-xs-12 col-sm-12 col-md-4 margin4 text-center">
-							<img src="./resource/images/for3.jpg" alt="ForYou" style="height: auto;max-width: 100%;" width="576" height="1074">
-						</div> 
-						<div class="col-xs-12 col-sm-12 col-md-4 margin4 text-center">
-							<img src="./resource/images/for1.jpg" alt="ForYou" style="height: auto;max-width: 100%;" width="576" height="1074"> 
-						</div> 
-						<div class="col-xs-12 col-sm-12 col-md-4 margin4 text-center">
-							<img src="./resource/images/for2.jpg" alt="ForYou" style="height: auto;max-width: 100%;" width="576" height="1074">
-						</div>  
-					</div>
-				</div>
-			</div> 
-			<!-- section2 end -->
-
-
-			<!-- section3 --> 
-			<div class="jumbotron numbers"> 
+			<!-- section4 --> 
+			<div class="jumbotron numbers" id="waypoint-basic"> 
 				<div class="container">
 					<!-- <div class="row">
 						<div class="col-xs-12 col-sm-12 col-md-12">
@@ -188,7 +171,7 @@
 							<h5 class="bobo-subtitle">Better less, but better.</h5>
 						</div>
 					</div> -->
-					<div class="row">
+					<div class="row number-main">
 						<div class="col-md-4 col-sm-4 col-xs-12 text-center">
 							<div class="roll-counter"> 
 								<i class="iconfont icon-typed whiteico"></i> 
@@ -213,6 +196,30 @@
 					</div>
 				</div>
 			</div> 
+			<!-- section4 end -->
+
+			<!-- section3 --> 
+			<div class="jumbotron contact"> 
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-12 col-sm-12 col-md-12">
+							<h3 class="bobo-title">For You</h3>
+							<h5 class="bobo-subtitle">We are so lucky to meet each other. I wish you good luck all the time.</h5>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-12 col-sm-12 col-md-4 margin4 text-center">
+							<img src="./resource/images/for3.jpg" alt="ForYou" class="img-responsive center-block" >
+						</div> 
+						<div class="col-xs-12 col-sm-12 col-md-4 margin4 text-center">
+							<img src="./resource/images/for1.jpg" alt="ForYou" class="img-responsive center-block" > 
+						</div> 
+						<div class="col-xs-12 col-sm-12 col-md-4 margin4 text-center">
+							<img src="./resource/images/for2.jpg" alt="ForYou" class="img-responsive center-block" >
+						</div>  
+					</div>
+				</div>
+			</div> 
 			<!-- section3 end -->
 
 		</div>
@@ -222,22 +229,55 @@
 
 	<script src="https://code.jquery.com/jquery-2.2.4.js"></script>
 	<script src="./resource/bootstrap3/js/bootstrap.js"></script>
-	<!-- superslides -->
+	<!-- superslides --> 
 	<script src="./resource/plugin/superslides0.5/jquery.superslides.js"></script>
 	<script src="./resource/plugin/superslides0.5/js/jquery.animate-enhanced.min.js"></script>
 	<script src="./resource/plugin/superslides0.5/js/jquery.easing.1.3.js"></script>
 	<!-- jquery.countTo -->
   	<script type="text/javascript" src="./resource/plugin/jquery.countTo/jquery.countTo.js"></script>
+  	<!-- waypoints -->
+  	<script type="text/javascript" src="./resource/plugin/waypoints/jquery.waypoints.min.js"></script>
+  	
+  	<!-- appear -->
+  	<script type="text/javascript" src="./resource/plugin/jquery.appear/jquery.appear.js"></script>
 
 	<script type="text/javascript">
 	$(function(){
-		// numberGo 
-		$('.roll-counter').find('.numb-count').each(function () {
-			var e = parseInt($(this).attr('data-to'));
-			$(this).countTo({
-				to: e
-			})
-		});
+		// waypoints 滚动监听
+		// numberGo  数字动画
+		// $('[data-waypoint-active="yes"]').waypoint(function () {
+		// 	console.log('yes is right!');
+		// 	console.log($(this));
+		// 	$(this).trigger('appear'); // disappear
+		// }, {
+		// 	offset: '90%',
+		// 	triggerOnce: !0
+		// }), 
+
+		// $('.roll-counter').on('appear', function () {
+		// 	console.log('appear');
+		// 	$(this).find('.numb-count').each(function () {
+		// 		var e = parseInt($(this).attr('data-to'));
+		// 		$(this).countTo({
+		// 			to: e
+		// 		})
+		// 	})
+		// }); 
+		
+		// waypoints & countTo Try
+		// console.log($('#waypoint-basic').is(':appeared'); // 是否显示在视图窗口 
+		$('#waypoint-basic').waypoint(function() {  
+			console.log('Here you are');
+			
+			$('.roll-counter').find('.numb-count').each(function () {
+				var e = parseInt($(this).attr('data-to'));
+				$(this).countTo({
+					to: e
+				});
+			});
+			this.destroy();
+		}, {offset: "90%", triggerOnce: false});
+ 
 
 		// navbar
 		var e = $('.nav-custom').offset().top;
