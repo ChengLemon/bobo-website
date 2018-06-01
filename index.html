@@ -17,6 +17,9 @@
 		.number-main .col-md-4:nth-child(3) .numb-count::after {
 			content:" hours";
 		} 
+		.preloader .pre-bounce1, .preloader .pre-bounce2 {
+			background-color: #08aba6;
+		}
 	</style>
 </head>
 <body class="">
@@ -220,10 +223,8 @@
 					</div>
 				</div>
 			</div> 
-			<!-- section3 end -->
-
-		</div>
- 
+			<!-- section3 end --> 
+		</div> 
 	</div>
 
 
@@ -243,6 +244,12 @@
 
 	<script type="text/javascript">
 	$(function(){
+		// preloader
+		$('.preloader').css('opacity', 0);
+		setTimeout(function () { 
+			$('.preloader').hide();
+		}, 600);
+
 		// waypoints 滚动监听
 		// numberGo  数字动画
 		// $('[data-waypoint-active="yes"]').waypoint(function () {
@@ -263,7 +270,7 @@
 		// 		})
 		// 	})
 		// }); 
-		
+
 		// waypoints & countTo Try
 		// console.log($('#waypoint-basic').is(':appeared'); // 是否显示在视图窗口 
 		$('#waypoint-basic').waypoint(function() {  
