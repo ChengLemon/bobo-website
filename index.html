@@ -75,7 +75,7 @@
 		<div id="slides">
 			<ul class="slides-container">
 				<li>
-					<img src="./resource/images/section1.jpg" width="1024" height="682" alt="Cinelli"> 
+					<img class="img-responsive" src="./resource/images/section1.jpg" width="1024" height="682" alt="Cinelli"> 
 				</li> 
 			</ul> 
 		</div>
@@ -147,7 +147,7 @@
 					<div class="row">
 						<div class="col-xs-12 col-sm-12 col-md-12">
 							<h3 class="bobo-title">For You</h3>
-							<h5 class="bobo-subtitle">We are so lucky to meet each other. I wish you good luck all the time.</h5>
+							<h5 class="bobo-subtitle">We are so lucky to know each other. I wish you good luck all the time.</h5>
 						</div>
 					</div>
 					<div class="row">
@@ -227,6 +227,9 @@
 		</div> 
 	</div>
 
+	<!-- go top -->
+	<a class="go-top"><i class="fa fa-angle-up"></i></a>
+
 
 	<script src="https://code.jquery.com/jquery-2.2.4.js"></script>
 	<script src="./resource/bootstrap3/js/bootstrap.js"></script>
@@ -244,6 +247,17 @@
 
 	<script type="text/javascript">
 	$(function(){
+		// go-top
+		$(window).scroll(function () {
+			console.log($(this).scrollTop());
+			$(this).scrollTop() > 600 ? $('.go-top').addClass('show')  : $('.go-top').removeClass('show')
+		}),
+		$('.go-top').on('click', function () {
+			return $('html, body').animate({
+				scrollTop: 0
+			}, 1000), !1
+		})
+
 		// preloader
 		$('.preloader').css('opacity', 0);
 		setTimeout(function () { 
