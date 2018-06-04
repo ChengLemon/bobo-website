@@ -10,6 +10,19 @@ body {
 .preloader .pre-bounce1, .preloader .pre-bounce2, .go-top { 
 	background-color: #08aba6;
 }
+/*go-top*/
+.go-top.show {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: alpha(opacity=100);
+    opacity: 1;
+    visibility: visible; /*元素是否是可见的, hidden\visible\collapse(删除表格中的一行或一列)*/
+    bottom: 11px;
+} 
+.go-top:hover {
+	color:#08aba6;
+	background-color: #ffffff;
+	text-decoration: none;
+}
 .go-top {
 	position: fixed !important;
 	right: 20px;
@@ -23,6 +36,7 @@ body {
 	height: 40px;
 	visibility: hidden;
 	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	/*滤镜*/
 	filter: alpha(opacity=0);
 	opacity: 0;
 	z-index: 9999;
@@ -37,13 +51,7 @@ body {
 	-o-transition: all 0.5s;
 	transition: all 0.5s;
 } 
-.go-top.show {
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-    filter: alpha(opacity=100);
-    opacity: 1;
-    visibility: visible;
-    bottom: 11px;
-} 
+
 /**
  * preloader
  */
@@ -85,9 +93,11 @@ body {
 	animation-delay: -0.5s;  
 }
 @-webkit-keyframes bounce {
+	/*0% 是动画的开始时间，100% 动画的结束时间。*/
 	0%, 20%, 50%, 80%, 100% {
 		-webkit-transform: translateY(0);
-		transform: translateY(0);
+		/*旋转、缩放、移动、倾斜*/
+		transform: translateY(0); 
 	}
 
 	40% {
@@ -224,7 +234,7 @@ h3 {
 .bobo-borderbotoom {
 	border-bottom: 1px solid #e0e0e0;
 }
-.foryou .bobo-title {
+.foryou .bobo-title, .forfuture .bobo-title {
 	margin-bottom: 10px;
 }
 .bobo-subtitle {
@@ -255,7 +265,4 @@ h3 {
 .whiteico {
 	color: #fff;
 	font-size: 30px !important;
-}
-.contact {
-	background-color: #f6f6f6;
-}
+} 
