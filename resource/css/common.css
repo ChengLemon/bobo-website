@@ -6,11 +6,14 @@ body {
 	font-size: 14px;
 }
 
-
+.logo-title {
+	font-size: 25px; 
+}
 .preloader .pre-bounce1, .preloader .pre-bounce2, .go-top { 
 	background-color: #08aba6;
 }
 /*go-top*/
+
 .go-top.show {
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
     filter: alpha(opacity=100);
@@ -51,10 +54,9 @@ body {
 	-o-transition: all 0.5s;
 	transition: all 0.5s;
 } 
+/** go-top end */
 
-/**
- * preloader
- */
+/** preloader */
 .preloader {
 	background: none repeat scroll 0 0 #fff;
 	height: 100%;
@@ -164,11 +166,38 @@ body {
 		transform: translateY(-15px);
 	}
 }
-/**
- * preloader end
- */
+/** preloader end */
+
+/**  contact */
+.contact {
+	background: #252525;
+}
+.contact p, .contact form, .contact span {
+	color: #fff;
+	font-size: 14px;
+}
+.contact button {
+	background: #08aba6;
+}
+/** contact end */
+
+/**  bobo-footer */
+.bobo-footer {
+	background: #1c1c1c;
+	color: #666666;
+	padding: 15px 0;
+} 
+.copyright {
+	margin: 0 !important;
+	font-size: 14px !important;
+}
+/** bobo-footer end */
+
 .nomargin-bottom {
 	margin-bottom: 0;
+}
+.nomargin {
+	margin: 0;
 }
 .nav-custom {
 	/*背景透明*/
@@ -199,6 +228,8 @@ body {
 h3 {
 	font-size: 32px;
 }
+
+/* icon */
 .icon { 
 	width: 70px;
 	height: 70px;
@@ -212,6 +243,8 @@ h3 {
 	font-size: 26px;
 	color: #F14F4F;
 }
+/* icon end */
+
 .bobo-whitebg {
 	background-color: #fff;
 }
@@ -234,7 +267,7 @@ h3 {
 .bobo-borderbotoom {
 	border-bottom: 1px solid #e0e0e0;
 }
-.foryou .bobo-title, .forfuture .bobo-title {
+.bobo-title {
 	margin-bottom: 10px;
 }
 .bobo-subtitle {
@@ -249,7 +282,7 @@ h3 {
 }
 .numbers {
 	background-color: #08aba6;
-	color: #fff;
+	color: #fff; 
 }
 .roll-counter .name-count {
 	font-size: 14px;
