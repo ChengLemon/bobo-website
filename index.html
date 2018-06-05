@@ -262,14 +262,13 @@
 		$('#forfuture').waypoint(function() {  
 			console.log('Here video are');
 			
-			$('.roll-counter').find('.numb-count').each(function () {
-				var e = parseInt($(this).attr('data-to'));
-				$(this).countTo({
-					to: e
-				});
+			var myPlayer = videojs('my-video');
+			videojs("my-video").ready(function(){
+				var myPlayer = this;
+				myPlayer.play();
 			});
-			this.destroy();
-		}, {offset: "50%", triggerOnce: false});
+
+		}, {offset: "60%", triggerOnce: false});
 
 		// go-top
 		$(window).scroll(function () {
