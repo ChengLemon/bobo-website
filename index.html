@@ -5,10 +5,12 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>BOBO</title>
+    <link rel="icon" href="./favicon.ico"> 
+	<!-- bootstrap -->
 	<link rel="stylesheet" type="text/css" href="./resource/bootstrap3/css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="./resource/css/common.css">
 	<!-- superslides -->
-	<link rel="stylesheet" type="text/css" href="./resource/plugin/superslides0.5/superslides.css">
+	<!-- <link rel="stylesheet" type="text/css" href="./resource/plugin/superslides0.5/superslides.css"> -->
 	<link rel="stylesheet" type="text/css" href="./resource/iconfont/iconfont.css"> 
 	<!-- video.js -->
 	<link rel="stylesheet" type="text/css" href="./resource/plugin/video6.6.2.js/css/video-js.min.css">
@@ -23,6 +25,7 @@
 		.preloader .pre-bounce1, .preloader .pre-bounce2 {
 			background-color: #08aba6;
 		}
+ 
 	</style>
 </head>
 <body class="">
@@ -37,7 +40,7 @@
 			</div>
 		</div>
 
-		<nav class="navbar navbar-default nomargin-bottom nav-custom">
+		<nav class="navbar navbar-default nomargin-bottom nav-custom ">
 			<div class="container-fluid container">
 				<!-- Brand and toggle get grouped for better mobile display -->
 				<div class="navbar-header">
@@ -64,13 +67,32 @@
 		</nav>
   
 		<!-- carousel -->
-		<div id="slides">
+		<!-- <div id="slides">
 			<ul class="slides-container">
 				<li>
 					<img class="img-responsive" src="./resource/images/section4.jpg" alt="slider"> 
 				</li> 
 			</ul> 
-		</div>
+		</div> -->
+		<div class="sydney-hero-area">
+
+			<div id="slideshow" class="header-slider" data-speed="4000" data-mobileslider="responsive">
+				<div class="slides-container">
+
+					<div class="slide-item" style="background-image:url('./resource/images/section4.jpg');">
+						<img class="mobile-slide preserve" src="./resource/images/section4.jpg"/>
+						<!-- <div class="slide-inner">
+							<div class="contain animated fadeInRightBig text-slider">
+								<h2 class="maintitle">Revolutionising Waste - We Recycle 93% </h2>
+								<p class="subtitle">YOU CLICK. WE COLLECT</p>
+							</div>
+						 	<button type="button" class="btn btn-primary btn-lg" style="background: #08aba6;"> Contact Me </button>                      
+						</div> -->
+					</div>  
+				</div>  
+			</div> 
+
+		</div> 
 		<!-- carousel end -->
 
 		<div class="content-wrap">
@@ -183,7 +205,7 @@
 			<!-- section3 end --> 
 
 			<!-- section4 --> 
-			<div id="mynumbers waypoint-basic" class="jumbotron numbers nomargin-bottom" > 
+			<div id="mynumbers" class="waypoint-basic jumbotron numbers nomargin-bottom" > 
 				<div class="container">
 					<!-- <div class="row">
 						<div class="col-xs-12 col-sm-12 col-md-12">
@@ -272,13 +294,14 @@
 	<script src="https://code.jquery.com/jquery-2.2.4.js"></script>
 	<script src="./resource/bootstrap3/js/bootstrap.js"></script>
 	<!-- superslides --> 
-	<script src="./resource/plugin/superslides0.5/jquery.superslides.js"></script>
+	<!-- <script src="./resource/plugin/superslides0.5/jquery.superslides.js"></script> 
 	<script src="./resource/plugin/superslides0.5/js/jquery.animate-enhanced.min.js"></script>
-	<script src="./resource/plugin/superslides0.5/js/jquery.easing.1.3.js"></script>
-	<!-- jquery.countTo -->
-  	<script type="text/javascript" src="./resource/plugin/jquery.countTo/jquery.countTo.js"></script>
+	<script src="./resource/plugin/superslides0.5/js/jquery.easing.1.3.js"></script> --> 
+	<script src="./resource/plugin/superslides0.5/jquery.superslides.js"></script> 
   	<!-- waypoints -->
   	<script type="text/javascript" src="./resource/plugin/waypoints/jquery.waypoints.min.js"></script>
+	<!-- jquery.countTo -->
+  	<script type="text/javascript" src="./resource/plugin/jquery.countTo/jquery.countTo.js"></script>
   	<!-- appear -->
   	<script type="text/javascript" src="./resource/plugin/jquery.appear/jquery.appear.js"></script>
   	<!-- video.js -->
@@ -338,7 +361,7 @@
 
 		// waypoints & countTo Try
 		// console.log($('#waypoint-basic').is(':appeared'); // 是否显示在视图窗口 
-		$('#waypoint-basic').waypoint(function() {  
+		$('.waypoint-basic').waypoint(function() {  
 			console.log('Here you are');
 			
 			$('.roll-counter').find('.numb-count').each(function () {
@@ -360,15 +383,39 @@
 	    });
 
 	    // fullscreen slider 
-		$('#slides').superslides({
-			// play: 2000, // 毫秒，自动进入下一张幻灯片，幻灯片需>2张
-			animation: 'fade',
-			slide_easing: 'easeInOutCubic',
-			slide_speed: 800, // 进入速度
-			pagination: false, // 底部黑点用于翻页
-			hashchange: false,
-			scrollabe: false
-		}); 
+	    $('.slides-container .slide-item').addClass('sliderFix');
+	    setTimeout(function () {
+	      $('.slides-container .slide-item').removeClass('sliderFix')
+	    }, 200);
+
+	    function e() {
+	    	$('#slideshow').imagesLoaded(function () {
+	    		if ($(window).width() <= 1024) {
+	    			var e = $('.slide-item:first-of-type').height();
+	    			$('.sydney-hero-area, #slideshow').height(e);
+	    		} else $('.sydney-hero-area').css('height', 'auto')
+	    	})
+	    } 
+    	$('#slideshow').length && $('#slideshow').superslides({
+    		// play: $('#slideshow').data('speed'),
+    		animation: 'fade',
+    		pagination: false
+    	}) 
+	    'responsive' === $('#slideshow').data('mobileslider') && ($(document).ready(e), $(window).resize(function () {
+	    	setTimeout(function () {
+	    		e()
+	    	}, 50)
+	    })); 
+
+		// $('#slides').superslides({
+		// 	// play: 2000, // 毫秒，自动进入下一张幻灯片，幻灯片需>2张
+		// 	animation: 'fade',
+		// 	slide_easing: 'easeInOutCubic',
+		// 	slide_speed: 800, // 进入速度
+		// 	pagination: false, // 底部黑点用于翻页
+		// 	hashchange: false,
+		// 	scrollabe: false
+		// }); 
 	});
 	</script>
 </body>
