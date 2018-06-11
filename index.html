@@ -184,11 +184,11 @@
 							<img src="./resource/images/for2.jpg" alt="ForYou" class="img-responsive center-block" >
 						</div>  
 					</div>
-					<div class="row"> 
+					<!-- <div class="row"> 
 						<div class="col-xs-12 col-sm-12 col-md-12">
 							<div id="bobo-echarts" class="center-block" style="width: 600px; height: 600px;"></div> 
 						</div>
-					</div>
+					</div> -->
 				</div>
 			</div> 
 			<!-- section2 end -->
@@ -327,27 +327,27 @@
 	<script type="text/javascript">
 	$(function(){
 		// echarts 
-		var echartsId = document.getElementById('bobo-echarts');
-		var myecharts = echarts.init(echartsId, 'macarons');
-	 	var option = {  
-            title: {
-                text: 'ECharts 入门示例'
-            },
-            tooltip: {},
-            legend: {
-                data:['销量']
-            },
-            xAxis: { 
-                data: ["衬衫", "羊毛衫", "雪纺衫", "裤子", "高跟鞋", "袜子"] 
-            },
-            yAxis: {},
-            series: [{
-                name: '销量',
-                type: 'bar',
-                data: [5, 20, 36, 10, 10, 20]
-            }]
-        }; 
-        myecharts.setOption(option); 
+		// var echartsId = document.getElementById('bobo-echarts');
+		// var myecharts = echarts.init(echartsId, 'macarons');
+		// var option = {  
+		// 	title: {
+		// 		text: 'ECharts 入门示例'
+		// 	},
+		// 	tooltip: {},
+		// 	legend: {
+		// 		data:['销量']
+		// 	},
+		// 	xAxis: { 
+		// 		data: ["衬衫", "羊毛衫", "雪纺衫", "裤子", "高跟鞋", "袜子"] 
+		// 	},
+		// 	yAxis: {},
+		// 	series: [{
+		// 		name: '销量',
+		// 		type: 'bar',
+		// 		data: [5, 20, 36, 10, 10, 20]
+		// 	}]
+		// }; 
+        // myecharts.setOption(option); 
 
 		// video.js 
 		var myPlayer = videojs('my-video');  
