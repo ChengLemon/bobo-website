@@ -6,14 +6,22 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>BOBO</title>
     <link rel="icon" href="./favicon.ico"> 
+     <!--[if lte IE 9]>
+	<script src="./resource/plugin/html5shiv.js"></script>
+	<![endif]-->
 	<!-- bootstrap -->
 	<link rel="stylesheet" type="text/css" href="./resource/bootstrap3/css/bootstrap.css">
+	<!-- custom css -->
 	<link rel="stylesheet" type="text/css" href="./resource/css/common.css">
 	<!-- superslides -->
 	<!-- <link rel="stylesheet" type="text/css" href="./resource/plugin/superslides0.5/superslides.css"> -->
+	<!-- iconfont -->
 	<link rel="stylesheet" type="text/css" href="./resource/iconfont/iconfont.css"> 
 	<!-- video.js -->
 	<link rel="stylesheet" type="text/css" href="./resource/plugin/video6.6.2.js/css/video-js.min.css">
+	<!-- Echarts -->
+	<script src="./resource/plugin/echarts/echarts.js" type="text/javascript" charset="utf-8"></script>
+	<!-- <script src="./resource/plugin/echarts/macarons.js" type="text/javascript" charset="utf-8"></script> --> 
 
 	<style type="text/css" media="screen"> 
 		.number-main .col-md-4:nth-child(2) .numb-count::after {
@@ -164,7 +172,7 @@
 							<h5 class="bobo-subtitle">We are so lucky to know each other. I wish you good luck all the time.</h5>
 						</div>
 					</div>
-					<div class="row">
+						<div class="row">
 						<div class="col-xs-12 col-sm-12 col-md-4 margin4 text-center">
 							<img src="./resource/images/for3.jpg" alt="ForYou" class="img-responsive center-block" >
 						</div> 
@@ -174,6 +182,11 @@
 						<div class="col-xs-12 col-sm-12 col-md-4 margin4 text-center">
 							<img src="./resource/images/for2.jpg" alt="ForYou" class="img-responsive center-block" >
 						</div>  
+					</div>
+					<div class="row">
+						<div class="col-xs-12 col-sm-12 col-md-12">
+							<div id="echart-example" class="center-block" style="width: 600px; height: 600px;"></div>	
+						</div>
 					</div>
 				</div>
 			</div> 
@@ -309,6 +322,30 @@
 
 	<script type="text/javascript">
 	$(function(){
+		// echarts
+		var myecharts = echarts.init(document.getElementById('echart-example'));
+        // 指定图表的配置项和数据
+        var option = {
+        	lang: "EN",
+            title: {
+                text: 'ECharts 入门示例'
+            },
+            tooltip: {},
+            legend: {
+                data:['销量']
+            },
+            xAxis: {
+                data: ["衬衫", "羊毛衫", "雪纺衫", "裤子", "高跟鞋", "袜子"]
+            },
+            yAxis: {},
+            series: [{
+                name: '销量',
+                type: 'bar',
+                data: [5, 20, 36, 10, 10, 20]
+            }]
+        };
+        myecharts.setOption(option);
+
 		// video.js 
 		$('#forfuture').waypoint(function() {  
 			// console.log('Here video are');
@@ -361,13 +398,11 @@
 
 		// waypoints & countTo Try
 		// console.log($('#waypoint-basic').is(':appeared'); // 是否显示在视图窗口 
-		$('.waypoint-basic').waypoint(function() {  
-			console.log('Here you are');
-			
+		$('.waypoint-basic').waypoint(function() {  			
 			$('.roll-counter').find('.numb-count').each(function () {
-				var e = parseInt($(this).attr('data-to'));
+				let dataTo = parseInt($(this).attr('data-to'));
 				$(this).countTo({
-					to: e
+					to: dataTo
 				});
 			});
 			this.destroy();
